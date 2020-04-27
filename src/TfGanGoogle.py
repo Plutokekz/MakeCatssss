@@ -310,7 +310,7 @@ if __name__ == "__main__":
         if not os.path.exists(path):
             os.mkdir(path)
         if not os.path.exists('/artifacts/Data'):
-            os.mkdir('artifacts/Data')
+            os.mkdir('/artifacts/Data')
         download_file_from_google_drive(ID, 'artifacts/Data/data.np')
         # Batch and shuffle the data
         train_dataset = tf.data.Dataset.from_tensor_slices(load_data('artifacts/Data/data.np')).shuffle(
