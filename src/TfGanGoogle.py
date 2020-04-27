@@ -311,9 +311,9 @@ if __name__ == "__main__":
             os.mkdir(path)
         if not os.path.exists('/artifacts/Data'):
             os.mkdir('/artifacts/Data')
-        download_file_from_google_drive(ID, 'artifacts/Data/data.np')
+        download_file_from_google_drive(ID, '/artifacts/Data/data.np')
         # Batch and shuffle the data
-        train_dataset = tf.data.Dataset.from_tensor_slices(load_data('artifacts/Data/data.np')).shuffle(
+        train_dataset = tf.data.Dataset.from_tensor_slices(load_data('/artifacts/Data/data.np')).shuffle(
             BUFFER_SIZE).batch(BATCH_SIZE)
     if bool(LoadFromCheckPoint):
         checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
