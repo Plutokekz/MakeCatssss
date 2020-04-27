@@ -293,7 +293,7 @@ def save_response_content(response, destination):
 
 
 if __name__ == "__main__":
-    BATCH_SIZE, RunOnGradient, LoadFromCheckPoint = sys.argv[1:3]
+    BATCH_SIZE, RunOnGradient, LoadFromCheckPoint = sys.argv[1:4]
     BATCH_SIZE = int(BATCH_SIZE)
     RunOnGradient = int(RunOnGradient)
     LoadFromCheckPoint = int(LoadFromCheckPoint)
