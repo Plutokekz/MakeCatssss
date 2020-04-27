@@ -299,8 +299,8 @@ if __name__ == "__main__":
     LoadFromCheckPoint = int(LoadFromCheckPoint)
     path = "output"
     # Batch and shuffle the data
-    train_dataset = tf.data.Dataset.from_tensor_slices(load_data()).shuffle(BUFFER_SIZE).batch(
-        BATCH_SIZE)
+    #train_dataset = tf.data.Dataset.from_tensor_slices(load_data()).shuffle(BUFFER_SIZE).batch(
+    #    BATCH_SIZE)
     if bool(RunOnGradient):
         checkpoint_dir = '/artifacts/training_checkpoints'
         path = "/artifacts/output"
